@@ -1,0 +1,111 @@
+.record {
+  border-radius: 8px;
+  list-style: none;
+  color: #eee;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  align-items: center;
+  background-color: #222;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  ::-webkit-scrollbar {
+    width: 0.1rem;
+    height: 0.1rem;
+  }
+  @media screen and (max-width: 768px) {
+    height: 3rem;
+  }
+}
+
+.record:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  width: 98%;
+  opacity: 0.7;
+}
+
+.record-date {
+  font-weight: bold;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.record-meal {
+  color: #fff;
+  font-style: italic;
+  text-transform: capitalize;
+  text-align: center;
+  width: 10vb;
+}
+.record-content {
+  color: #fff;
+  font-style: italic;
+  padding: 10px 0;
+  text-align: center;
+  max-height: 8vb;
+  width: 20vb;
+  overflow-x: auto;
+  overflow-y: auto;
+  @media screen and (max-width: 768px) {
+    max-height: 5vb;
+    width: 10vb;
+    font-size: 12px;
+  }
+}
+.record-calories {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    background-color: #333;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: 8px 12px;
+    min-width: 100px;
+  }
+}
+
+.record-date:hover,
+.record-meal:hover,
+.record-content:hover,
+.record-calories:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  .record-meal,
+  .record-calories {
+    font-size: 14px;
+  }
+}
+.record:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.RxCross1 {
+  transition-property: opacity;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.RxCross1:hover {
+  opacity: 0.7;
+  color: red;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
